@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+  font-family: 'Courier New', Courier, monospace;
+  color: #0f0;
+}
+
+#matrix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#text-container {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+  white-space: pre-wrap;
+  opacity: 0;
+  transition: opacity 1s ease, text-shadow 1s ease;
+}
+
+#text-container.glow {
+  opacity: 1;
+  text-shadow: 0 0 20px #0f0, 0 0 40px #0f0, 0 0 60px #0f0;
+}
+
+#text-container .heart {
+  color: red;
+  text-shadow: 0 0 15px red, 0 0 30px red;
+}
+
+#qr-container {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
